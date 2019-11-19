@@ -12,13 +12,13 @@ public class ForLoops {
 
     public static String countDown(int num1 , int num2){
         String list = "";
-        if(num1 < num2){
+        if(num1 <= num2){
             for(int count = num2; count >= num1; count--){
                 list += count + " ";
             }
         }
         else{
-            list = " ";
+            list = "";
         }
         return list;
     }
@@ -29,11 +29,14 @@ public class ForLoops {
             for (int count = num2; count >= num1; count--) {
                 list += count + " ";
             }
-        } else {
-            for (int count = num1; count >= num2; count++) {
+        } else if(num1> num2) {
+            for (int count = num1; count >= num2; count--) {
                 list += count + " ";
             }
+        }  else{
+            list = num1 + " ";
         }
+
         return list;
     }
 
